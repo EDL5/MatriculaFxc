@@ -82,7 +82,7 @@ public class EstudianteDatosController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        chbGrado.getItems().addAll(gradito1);
+        chbGrado.getItems().addAll(gradito2);
         chbNivel.getItems().addAll(nivelito);
         chbSeccion.getItems().addAll(secshion);
         chbSituacion.getItems().addAll(situasau);

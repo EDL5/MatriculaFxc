@@ -1,23 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package Controlador;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
-/**
- * FXML Controller class
- *
- * @author Edu
- */
 public class BordeController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Button btnEntraEstudiante;
+
+    @FXML
+    private Button btnEntraPadre;
+
+    @FXML
+    private Button btnEntraPago;
+
+    @FXML
+    void EntraPadres(ActionEvent event) {
+
+    }
+
+    @FXML
+    void EntraPago(ActionEvent event) {
+
+    }
+
+    @FXML
+    void EntrarEstudiante(ActionEvent event) {
+
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
