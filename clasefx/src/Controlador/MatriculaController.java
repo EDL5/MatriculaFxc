@@ -12,7 +12,7 @@ import javafx.fxml.Initializable;
 
 public class MatriculaController implements Initializable {
 
-     @FXML
+    @FXML
     private Button btnGuardar;
 
     @FXML

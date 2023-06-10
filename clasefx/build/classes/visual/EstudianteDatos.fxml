@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="580.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="Controlador.EstudianteDatosController">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
    <children>
       <Label layoutX="172.0" layoutY="14.0" text="Datos del Alumno a Matricular">
          <font>
@@ -41,10 +40,12 @@
       <TextField fx:id="txtCodigoEstudiantil" layoutX="35.0" layoutY="375.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtColegioProcedente" layoutX="305.0" layoutY="75.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtCiudadNacimiento" layoutX="305.0" layoutY="145.0" prefHeight="25.0" prefWidth="244.0" />
+      <DatePicker fx:id="dapFechaNacimiento" layoutX="305.0" layoutY="245.0" onAction="#DateFecha" prefHeight="25.0" prefWidth="244.0" promptText="Nacimiento" />
       <TextField fx:id="txtProvinciaNacimiento" layoutX="305.0" layoutY="195.0" prefHeight="25.0" prefWidth="244.0" />
-      <DatePicker fx:id="dapFechaNacimiento" layoutX="305.0" layoutY="245.0" prefHeight="25.0" prefWidth="244.0" />
-      <TextField fx:id="txtEdad" layoutX="305.0" layoutY="295.0" />
+      <TextField fx:id="txtEdad" layoutX="305.0" layoutY="295.0" prefHeight="25.0" prefWidth="50.0" />
       <ChoiceBox fx:id="chbSituacion" layoutX="305.0" layoutY="345.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtDireccion" layoutX="35.0" layoutY="425.0" prefHeight="25.0" prefWidth="517.0" />
+      <Label layoutX="400.0" layoutY="275.0" text="DNI :" />
+      <TextField fx:id="txtDNI" layoutX="401.0" layoutY="295.0" />
    </children>
 </AnchorPane>
