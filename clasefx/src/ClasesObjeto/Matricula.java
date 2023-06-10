@@ -1,5 +1,5 @@
 package ClasesObjeto;
 
-public class Curso {
+public class Matricula {
     
 }

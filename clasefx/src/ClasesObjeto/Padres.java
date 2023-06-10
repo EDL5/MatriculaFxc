@@ -1,5 +1,5 @@
 package ClasesObjeto;
 
-public class Docente {
+public class Padres {
     
 }

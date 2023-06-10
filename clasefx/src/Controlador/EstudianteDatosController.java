@@ -60,6 +60,9 @@ public class EstudianteDatosController implements Initializable{
 
     @FXML
     private TextField txtProvinciaNacimiento;
+    
+    @FXML
+    private TextField txtDNI;
 
     @FXML
     void Guardar(ActionEvent event) {
@@ -68,9 +71,6 @@ public class EstudianteDatosController implements Initializable{
     
     @FXML
     void DateFecha(ActionEvent event) {
-        LocalDate fechita = dapFechaNacimiento.getValue();
-        String pattern = "MMMM dd, yyyy";
-        String datePattern = fechita.format(DateTimeFormatter.ofPattern(pattern));
 
     }
     private String[] gradito1 = {null,"1°","2°","3°","4°","5°"};
