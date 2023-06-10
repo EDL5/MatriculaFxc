@@ -77,7 +77,7 @@ public class EstudianteDatosController implements Initializable{
     private String[] gradito2 = {null,"1°","2°","3°","4°","5°","6°"};
     private String[] nivelito = {null,"Inicial","Primaria","Secundaria"};
     private String[] secshion = {null,"A","B","C","D","E","F"};
-    private String[] situasau = {null,"1°","2°","3°","4°","5°","6°"};
+    private String[] situasau = {null,"Promovido","Ingresante","Repitiente"};
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
