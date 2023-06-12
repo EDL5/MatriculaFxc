@@ -84,7 +84,7 @@ public class EstudianteDatosController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         
         cbxNivel.getItems().addAll(nivelito);
-         cbxGrado.getItems().addAll(gradito2);
+        cbxGrado.getItems().addAll(gradito2);
         if (cbxNivel.equals("Primaria")) {
             cbxGrado.getItems().addAll(gradito1);
         } else if (cbxNivel.equals("Secundaria")) {
