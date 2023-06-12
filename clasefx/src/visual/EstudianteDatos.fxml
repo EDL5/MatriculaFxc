@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -8,44 +9,62 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="580.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
    <children>
-      <Label layoutX="172.0" layoutY="14.0" text="Datos del Alumno a Matricular">
+      <Label alignment="TOP_CENTER" layoutX="134.0" layoutY="14.0" text="Datos del Alumno a Matricular" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="55.0" text="Nombre :" />
-      <Label layoutX="30.0" layoutY="105.0" text="Apellido Paterno :" />
-      <Label layoutX="30.0" layoutY="155.0" text="Apellido Materno :" />
-      <Label layoutX="300.0" layoutY="55.0" text="Institucion Educariva Procedente :" />
-      <Label layoutX="30.0" layoutY="205.0" text="Nivel :" />
-      <Label layoutX="30.0" layoutY="305.0" text="Grado :" />
-      <Label layoutX="30.0" layoutY="255.0" text="Seccion :" />
-      <Label layoutX="300.0" layoutY="325.0" text="Situación :" />
-      <Label layoutX="300.0" layoutY="105.0" text="Lugar de Nacimiento :" />
-      <Label layoutX="310.0" layoutY="125.0" text="Ciudad :" />
-      <Label layoutX="310.0" layoutY="175.0" text="Provincia :" />
-      <Label layoutX="300.0" layoutY="225.0" text="Fecha de Nacimiento ;" />
-      <Label layoutX="300.0" layoutY="275.0" text="Edad :" />
-      <Label layoutX="30.0" layoutY="405.0" text="Direccion de Estudiante :" />
-      <Button fx:id="btnGuardar" layoutX="493.0" layoutY="465.0" mnemonicParsing="false" onAction="#Guardar" text="Guardar" />
-      <Label layoutX="30.0" layoutY="355.0" text="Codigo Estudiantil :" />
+      <Label layoutX="30.0" layoutY="55.0" text="Nombre :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="105.0" text="Apellido Paterno :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="155.0" text="Apellido Materno :" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="55.0" text="Institucion Educariva Procedente :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="205.0" text="Nivel :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="305.0" text="Grado :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="255.0" text="Seccion :" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="325.0" text="Situación :" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="105.0" text="Lugar de Nacimiento :" textFill="WHITE" />
+      <Label layoutX="310.0" layoutY="125.0" text="Ciudad :" textFill="WHITE" />
+      <Label layoutX="310.0" layoutY="175.0" text="Provincia :" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="225.0" text="Fecha de Nacimiento ;" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="275.0" text="Edad :" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="405.0" text="Direccion de Estudiante :" textFill="WHITE" />
+      <Button fx:id="btnGuardar" layoutX="439.0" layoutY="463.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Label layoutX="30.0" layoutY="355.0" text="Codigo Estudiantil :" textFill="WHITE" />
       <TextField fx:id="txtNombre" layoutX="35.0" layoutY="75.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtApellidoPaterno" layoutX="35.0" layoutY="125.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtApellidoMaterno" layoutX="35.0" layoutY="175.0" prefHeight="25.0" prefWidth="244.0" />
-      <ChoiceBox fx:id="chbNivel" layoutX="35.0" layoutY="225.0" prefHeight="25.0" prefWidth="244.0" />
-      <ChoiceBox fx:id="chbSeccion" layoutX="35.0" layoutY="275.0" prefHeight="25.0" prefWidth="244.0" />
-      <ChoiceBox fx:id="chbGrado" layoutX="35.0" layoutY="325.0" prefHeight="25.0" prefWidth="244.0" />
+      <ChoiceBox fx:id="chbNivel" layoutX="35.0" layoutY="225.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <ChoiceBox fx:id="chbSeccion" layoutX="35.0" layoutY="275.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <ChoiceBox fx:id="chbGrado" layoutX="35.0" layoutY="325.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
       <TextField fx:id="txtCodigoEstudiantil" layoutX="35.0" layoutY="375.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtColegioProcedente" layoutX="305.0" layoutY="75.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtCiudadNacimiento" layoutX="305.0" layoutY="145.0" prefHeight="25.0" prefWidth="244.0" />
-      <DatePicker fx:id="dapFechaNacimiento" layoutX="305.0" layoutY="245.0" onAction="#DateFecha" prefHeight="25.0" prefWidth="244.0" promptText="Nacimiento" />
+      <DatePicker fx:id="dapFechaNacimiento" layoutX="305.0" layoutY="245.0" onAction="#DateFecha" prefHeight="25.0" prefWidth="244.0" promptText="Nacimiento" style="-fx-background-color: #ffffff;">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></DatePicker>
       <TextField fx:id="txtProvinciaNacimiento" layoutX="305.0" layoutY="195.0" prefHeight="25.0" prefWidth="244.0" />
       <TextField fx:id="txtEdad" layoutX="305.0" layoutY="295.0" prefHeight="25.0" prefWidth="50.0" />
-      <ChoiceBox fx:id="chbSituacion" layoutX="305.0" layoutY="345.0" prefHeight="25.0" prefWidth="244.0" />
+      <ChoiceBox fx:id="chbSituacion" layoutX="305.0" layoutY="345.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #ffffff;" />
       <TextField fx:id="txtDireccion" layoutX="35.0" layoutY="425.0" prefHeight="25.0" prefWidth="517.0" />
-      <Label layoutX="400.0" layoutY="275.0" text="DNI :" />
+      <Label layoutX="400.0" layoutY="275.0" text="DNI :" textFill="WHITE" />
       <TextField fx:id="txtDNI" layoutX="401.0" layoutY="295.0" />
    </children>
 </AnchorPane>
