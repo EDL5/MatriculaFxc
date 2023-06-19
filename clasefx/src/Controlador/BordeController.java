@@ -27,7 +27,11 @@ public class BordeController implements Initializable {
     private Button btnEntraPago;
     
     @FXML
+    private Button btnRegistro;
+    
+    @FXML
     private StackPane spContenedor;
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -62,6 +66,17 @@ public class BordeController implements Initializable {
             Parent spEstudiante = FXMLLoader.load(getClass().getResource("/visual/EstudianteDatos.fxml"));
             spContenedor.getChildren().removeAll();
             spContenedor.getChildren().setAll(spEstudiante);
+        } catch (IOException ex) {
+            Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
+    void RegistroAlumno(ActionEvent event) {
+        try {
+            Parent spRegistroAlumno = FXMLLoader.load(getClass().getResource("/visual/InformeAlumno.fxml"));
+            spContenedor.getChildren().removeAll();
+            spContenedor.getChildren().setAll(spRegistroAlumno);
         } catch (IOException ex) {
             Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
         }
