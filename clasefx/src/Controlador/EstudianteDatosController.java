@@ -20,16 +20,7 @@ public class EstudianteDatosController implements Initializable{
     private Button btnGuardar;
 
     @FXML
-    private ComboBox<String> cbxGrado;
-
-    @FXML
     private ComboBox<String> cbxNivel;
-
-    @FXML
-    private ComboBox<String> cbxSeccion;
-
-    @FXML
-    private ComboBox<String> cbxSituacion;
 
     @FXML
     private DatePicker dapFechaNacimiento;
@@ -41,28 +32,13 @@ public class EstudianteDatosController implements Initializable{
     private TextField txtApellidoPaterno;
 
     @FXML
-    private TextField txtCiudadNacimiento;
-
-    @FXML
-    private TextField txtCodigoEstudiantil;
-
-    @FXML
-    private TextField txtColegioProcedente;
+    private TextField txtDNI;
 
     @FXML
     private TextField txtDireccion;
 
     @FXML
-    private TextField txtEdad;
-
-    @FXML
     private TextField txtNombre;
-
-    @FXML
-    private TextField txtProvinciaNacimiento;
-    
-    @FXML
-    private TextField txtDNI;
 
     @FXML
     void Guardar(ActionEvent event) {
@@ -84,16 +60,6 @@ public class EstudianteDatosController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         
         cbxNivel.getItems().addAll(nivelito);
-        cbxGrado.getItems().addAll(gradito2);
-        if (cbxNivel.equals("Primaria")) {
-            cbxGrado.getItems().addAll(gradito1);
-        } else if (cbxNivel.equals("Secundaria")) {
-            cbxGrado.getItems().addAll(gradito2);
-        } else if (cbxNivel.equals("Inicial")) {
-            cbxGrado.getItems().addAll(gra);
-        }
-        cbxSeccion.getItems().addAll(secshion);
-        cbxSituacion.getItems().addAll(situasau);
     }
 
 }

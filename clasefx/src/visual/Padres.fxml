@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="580.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.PadresController">
@@ -15,42 +14,18 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="45.0" text="Datos del Padre :" textFill="WHITE" />
-      <Label layoutX="30.0" layoutY="225.0" text="Datos de la Madre :" textFill="WHITE" />
       <Label layoutX="40.0" layoutY="65.0" text="Nombre :" textFill="WHITE" />
-      <Label layoutX="306.0" layoutY="115.0" text=" Apellido Paterno :" textFill="WHITE" />
+      <Label layoutX="39.0" layoutY="174.0" text=" Apellido Paterno :" textFill="WHITE" />
       <Label layoutX="40.0" layoutY="115.0" text="Apelldo Materno :" textFill="WHITE" />
-      <Label layoutX="433.0" layoutY="65.0" text="Telefono :" textFill="WHITE" />
-      <Label layoutX="40.0" layoutY="165.0" text="Lugar de Trabajo :" textFill="WHITE" />
-      <Label layoutX="234.0" layoutY="165.0" text="Direccion :" textFill="WHITE" />
-      <Label layoutX="306.0" layoutY="65.0" text="DNI :" textFill="WHITE" />
+      <Label layoutX="171.0" layoutY="240.0" text="Telefono :" textFill="WHITE" />
+      <Label layoutX="40.0" layoutY="311.0" text="Direccion :" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="240.0" text="DNI :" textFill="WHITE" />
       <TextField fx:id="txtNombrePadre" layoutX="50.0" layoutY="85.0" prefHeight="25.0" prefWidth="242.0" />
-      <TextField fx:id="txtApellidoPP" layoutX="312.0" layoutY="135.0" prefHeight="25.0" prefWidth="242.0" />
+      <TextField fx:id="txtApellidoPP" layoutX="50.0" layoutY="198.0" prefHeight="25.0" prefWidth="242.0" />
       <TextField fx:id="txtApellidoMP" layoutX="50.0" layoutY="135.0" prefHeight="25.0" prefWidth="242.0" />
-      <TextField fx:id="txtDNIMadre" layoutX="312.0" layoutY="85.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtTelefonoPadre" layoutX="441.0" layoutY="85.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtTrabajoPadre" layoutX="50.0" layoutY="185.0" prefHeight="25.0" prefWidth="177.0" />
-      <TextField fx:id="txtDireccionPadre" layoutX="245.0" layoutY="185.0" prefHeight="25.0" prefWidth="312.0" />
-      <Line endX="264.0" layoutX="288.0" layoutY="218.0" startX="-257.0" stroke="WHITE" />
-      <Label layoutX="40.0" layoutY="245.0" text="Nombre :" textFill="WHITE" />
-      <Label layoutX="306.0" layoutY="245.0" text="DNI :" textFill="WHITE" />
-      <Label layoutX="433.0" layoutY="245.0" text="Telefono ;" textFill="WHITE" />
-      <Label layoutX="40.0" layoutY="295.0" text="Apellido Paterno :" textFill="WHITE" />
-      <Label layoutX="306.0" layoutY="295.0" text="Apelldo Materno :" textFill="WHITE" />
-      <Label layoutX="40.0" layoutY="345.0" text="Lugar de Trabajo :" textFill="WHITE" />
-      <Label layoutX="234.0" layoutY="345.0" text="Direccion :" textFill="WHITE" />
-      <TextField fx:id="txtNombreMadre" layoutX="50.0" layoutY="265.0" prefHeight="25.0" prefWidth="242.0" />
-      <TextField fx:id="txtDNIMadre" layoutX="312.0" layoutY="265.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtTelefonoMadre" layoutX="441.0" layoutY="265.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtApellidoPM" layoutX="50.0" layoutY="315.0" prefHeight="25.0" prefWidth="242.0" />
-      <TextField fx:id="txtApellidoMM" layoutX="312.0" layoutY="315.0" prefHeight="25.0" prefWidth="242.0" />
-      <TextField fx:id="txtTrabajoMadre" layoutX="50.0" layoutY="365.0" prefHeight="25.0" prefWidth="177.0" />
-      <TextField fx:id="txtDireccionMadre" layoutX="245.0" layoutY="365.0" prefHeight="25.0" prefWidth="312.0" />
-      <Line endX="264.0" layoutX="288.0" layoutY="398.0" startX="-257.0" stroke="WHITE" />
-      <Label layoutX="40.0" layoutY="410.0" text="En caso de Emergencias Comunicarse con :" textFill="WHITE" />
-      <Label layoutX="40.0" layoutY="440.0" text="Telefono :" textFill="WHITE" />
-      <TextField fx:id="txtNombreEmegencia" layoutX="280.0" layoutY="409.0" prefHeight="25.0" prefWidth="277.0" />
-      <TextField fx:id="txtTelefonoEmergencia" layoutX="280.0" layoutY="438.0" />
+      <TextField fx:id="txtDNIMadre" layoutX="41.0" layoutY="270.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="txtTelefonoPadre" layoutX="171.0" layoutY="270.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="txtDireccionPadre" layoutX="41.0" layoutY="338.0" prefHeight="25.0" prefWidth="312.0" />
       <Button fx:id="btnGuardar" layoutX="439.0" layoutY="463.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="19.0" />
