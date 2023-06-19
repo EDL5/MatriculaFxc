@@ -1,23 +1,44 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package Controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
-/**
- * FXML Controller class
- *
- * @author Edu
- */
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 public class InformeAlumnoController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    
+    @FXML
+    private TableColumn<?, ?> colApellidoMaterno;
+
+    @FXML
+    private TableColumn<?, ?> colApellidoPaterno;
+
+    @FXML
+    private TableColumn<?, ?> colDNI;
+
+    @FXML
+    private TableColumn<?, ?> colGrado;
+
+    @FXML
+    private TableColumn<?, ?> colID;
+
+    @FXML
+    private TableColumn<?, ?> colNombre;
+
+    @FXML
+    private TableColumn<?, ?> colPadres;
+
+    @FXML
+    private TableView<?> tblAlumno;
+
+    @FXML
+    private TextField txtnobreAlumnoBusca;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
