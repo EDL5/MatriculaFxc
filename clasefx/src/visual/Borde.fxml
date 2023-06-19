@@ -61,6 +61,18 @@
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Line endX="100.0" startX="-100.0" stroke="WHITE" />
+            <Button fx:id="btnRegistro" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#RegistroAlumno" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #3F2B65;" text="Registro Alumno" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Line endX="100.0" startX="-100.0" stroke="WHITE" />
          </children>
       </VBox>
    </left>

@@ -20,7 +20,7 @@
       <Label layoutX="235.0" layoutY="80.0" text="Descuento :" textFill="WHITE" />
       <Label layoutX="38.0" layoutY="145.0" text="Costo de la Matricula :" textFill="WHITE" />
       <Label layoutX="40.0" layoutY="80.0" text="Memensualidad :" textFill="WHITE" />
-      <Label layoutX="336.0" layoutY="145.0" text="Total a pagar :" textFill="#d0d0d0" />
+      <Label layoutX="336.0" layoutY="145.0" text="Total a pagar :" textFill="WHITE" />
       <TextField fx:id="txtMatricula" layoutX="171.0" layoutY="145.0" prefHeight="25.0" prefWidth="129.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="280.0" />
       <Label fx:id="lblCodMatricula" layoutX="168.0" layoutY="50.0" prefHeight="17.0" prefWidth="140.0" text="codMatri" textFill="WHITE" />
       <Label fx:id="lblFecha" layoutX="387.0" layoutY="50.0" prefHeight="17.0" prefWidth="149.0" text="fecha" textFill="WHITE" />
