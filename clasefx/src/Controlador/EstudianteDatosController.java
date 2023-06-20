@@ -21,6 +21,11 @@ public class EstudianteDatosController implements Initializable{
 
     @FXML
     private ComboBox<String> cbxNivel;
+    @FXML
+    private ComboBox<String> cbxGrado;
+
+    /*@FXML
+    private ComboBox<String> cbxNivel;*/
 
     @FXML
     private DatePicker dapFechaNacimiento;
@@ -49,17 +54,22 @@ public class EstudianteDatosController implements Initializable{
     void DateFecha(ActionEvent event) {
 
     }
-    private String[] gradito1 = {null,"1°","2°","3°","4°","5°"};
     private String[] gradito2 = {null,"1°","2°","3°","4°","5°","6°"};
-    private String[] nivelito = {null,"Inicial","Primaria","Secundaria"};
-    private String[] secshion = {null,"A","B","C","D","E","F"};
-    private String[] situasau = {null,"Promovido","Ingresante","Repitiente"};
-    private String[] gra = {null,"el niño tiene 3 años","el niño tiene 4 años","el niño tiene 5 años"};
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        cbxNivel.getItems().addAll(nivelito);
+
+        cbxGrado.getItems().addAll(gradito2);
+       /* if (cbxNivel.equals("Primaria")) {
+            cbxGrado.getItems().addAll(gradito1);
+        } else if (cbxNivel.equals("Secundaria")) {
+            cbxGrado.getItems().addAll(gradito2);
+        } else if (cbxNivel.equals("Inicial")) {
+            cbxGrado.getItems().addAll(gra);
+        }
+        cbxSeccion.getItems().addAll(secshion);
+        cbxSituacion.getItems().addAll(situasau);*/
     }
 
 }
