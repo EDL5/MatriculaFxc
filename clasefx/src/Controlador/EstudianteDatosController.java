@@ -22,8 +22,8 @@ public class EstudianteDatosController implements Initializable{
     @FXML
     private ComboBox<String> cbxGrado;
 
-    @FXML
-    private ComboBox<String> cbxNivel;
+    /*@FXML
+    private ComboBox<String> cbxNivel;*/
 
     @FXML
     private ComboBox<String> cbxSeccion;
@@ -82,10 +82,9 @@ public class EstudianteDatosController implements Initializable{
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        cbxNivel.getItems().addAll(nivelito);
+
         cbxGrado.getItems().addAll(gradito2);
-        if (cbxNivel.equals("Primaria")) {
+       /* if (cbxNivel.equals("Primaria")) {
             cbxGrado.getItems().addAll(gradito1);
         } else if (cbxNivel.equals("Secundaria")) {
             cbxGrado.getItems().addAll(gradito2);
@@ -93,7 +92,7 @@ public class EstudianteDatosController implements Initializable{
             cbxGrado.getItems().addAll(gra);
         }
         cbxSeccion.getItems().addAll(secshion);
-        cbxSituacion.getItems().addAll(situasau);
+        cbxSituacion.getItems().addAll(situasau);*/
     }
 
 }

@@ -41,7 +41,7 @@
       <TextField fx:id="txtDireccion" layoutX="511.0" layoutY="133.0" prefHeight="25.0" prefWidth="163.0" />
       <Label layoutX="90.0" layoutY="63.0" text="DNI :" textFill="WHITE" />
       <TextField fx:id="txtDNI" layoutX="134.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
-      <ComboBox fx:id="cbxNivel" layoutX="511.0" layoutY="59.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ffffff;" />
+      <ComboBox fx:id="cbxGrado" layoutX="511.0" layoutY="59.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ffffff;" />
       <TableView layoutX="32.0" layoutY="232.0" prefHeight="261.0" prefWidth="659.0">
         <columns>
           <TableColumn prefWidth="75.0" text="DNI" />

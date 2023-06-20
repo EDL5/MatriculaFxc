@@ -18,14 +18,17 @@ import javafx.scene.Parent;
 public class BordeController implements Initializable {
 
     @FXML
-    private Button btnEntraEstudiante;
+    private Button btnApoderados;
 
     @FXML
-    private Button btnEntraPadre;
+    private Button btnEstudiantes;
 
     @FXML
-    private Button btnEntraPago;
-    
+    private Button btnInforme;
+
+    @FXML
+    private Button btnPagos;
+
     @FXML
     private StackPane spContenedor;
     
@@ -37,9 +40,9 @@ public class BordeController implements Initializable {
     @FXML
     void EntraPadres(ActionEvent event){
         try {
-            Parent spPadres = FXMLLoader.load(getClass().getResource("/visual/Padres.fxml"));
-            spContenedor.getChildren().removeAll();
-            spContenedor.getChildren().setAll(spPadres);
+            Parent btnApoderados = FXMLLoader.load(getClass().getResource("/visual/Padres.fxml"));
+            spContenedor.getChildren().removeAll();//e
+            spContenedor.getChildren().setAll(btnApoderados);
         } catch (IOException ex) {
             Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -48,9 +51,9 @@ public class BordeController implements Initializable {
     @FXML
     void EntraPago(ActionEvent event) {
         try {
-            Parent spPago = FXMLLoader.load(getClass().getResource("/visual/Matriculas.fxml"));
-            spContenedor.getChildren().removeAll();
-            spContenedor.getChildren().setAll(spPago);
+            Parent btnPagos = FXMLLoader.load(getClass().getResource("/visual/Matriculas.fxml"));
+            spContenedor.getChildren().removeAll();//d
+            spContenedor.getChildren().setAll(btnPagos);
         } catch (IOException ex) {
             Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -59,9 +62,20 @@ public class BordeController implements Initializable {
     @FXML
     void EntrarEstudiante(ActionEvent event) {
         try {
-            Parent spEstudiante = FXMLLoader.load(getClass().getResource("/visual/EstudianteDatos.fxml"));
-            spContenedor.getChildren().removeAll();
-            spContenedor.getChildren().setAll(spEstudiante);
+            Parent btnEstudiantes = FXMLLoader.load(getClass().getResource("/visual/EstudianteDatos.fxml"));
+            spContenedor.getChildren().removeAll();//w
+            spContenedor.getChildren().setAll(btnEstudiantes);
+        } catch (IOException ex) {
+            Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    void EntraInforme(ActionEvent event) {
+        try {
+            Parent btnInforme = FXMLLoader.load(getClass().getResource("/visual/InformeAlumno.fxml"));
+            spContenedor.getChildren().removeAll();//rd
+            spContenedor.getChildren().setAll(btnInforme);
         } catch (IOException ex) {
             Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
         }
