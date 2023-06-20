@@ -43,13 +43,13 @@
       <TextField fx:id="txtDNI" layoutX="134.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
       <ComboBox fx:id="cbxGrado" layoutX="511.0" layoutY="59.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ffffff;" />
       <TableView layoutX="32.0" layoutY="232.0" prefHeight="261.0" prefWidth="659.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="DNI" />
-          <TableColumn prefWidth="119.0" text="Nombres" />
+         <columns>
+            <TableColumn prefWidth="75.0" text="DNI" />
+            <TableColumn prefWidth="119.0" text="Nombres" />
             <TableColumn prefWidth="134.0" text="Apellido Paterno" />
             <TableColumn minWidth="7.0" prefWidth="160.0" text="Apellido Materno" />
             <TableColumn minWidth="7.0" prefWidth="160.0" text="Grado" />
-        </columns>
+         </columns>
       </TableView>
    </children>
 </AnchorPane>
