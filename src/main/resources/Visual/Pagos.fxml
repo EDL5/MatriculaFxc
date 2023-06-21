@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="207.0" layoutY="14.0" text="Pagos de Mensualidad" textFill="WHITE">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblAlumnos" layoutX="25.0" layoutY="80.0" prefHeight="411.0" prefWidth="363.0">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="colApePaterno" prefWidth="104.0" text="Apelldo Paterno" />
+                <TableColumn fx:id="colApeMaterno" prefWidth="113.0" text="Apellido Materno" />
+                <TableColumn fx:id="colDNI" prefWidth="75.0" text="DNI" />
+            </columns>
+        </TableView>
+        <Label layoutX="424.0" layoutY="80.0" text="Nombre  de Alumno :" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtNombreAlu" layoutX="424.0" layoutY="108.0"  prefHeight="25.0" prefWidth="260.0" />
+        <Button fx:id="btnDeuda" layoutX="424.0" layoutY="151.0" mnemonicParsing="false"  prefHeight="40.0" prefWidth="83.0" style="-fx-background-color: #3F2B50;" text="Deuda" textFill="WHITE">
+            <font>
+                <Font size="19.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <TableView fx:id="tblDeuda" layoutX="424.0" layoutY="204.0" prefHeight="155.0" prefWidth="191.0">
+            <columns>
+                <TableColumn fx:id="colMes" prefWidth="100.0" text="Mes" />
+                <TableColumn fx:id="colCantidad" prefWidth="89.0" text="Cantidad" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnPagar" layoutX="424.0" layoutY="451.0" mnemonicParsing="false" style="-fx-background-color: #3F2B50;" text="Pagar" textFill="WHITE">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <TextField fx:id="txtPagoMensualidad" layoutX="424.0" layoutY="411.0" prefHeight="25.0" prefWidth="191.0" />
+        <Label layoutX="424.0" layoutY="378.0" text="Monto a canselar :" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
