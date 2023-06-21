@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.PadresController">
    <children>
-      <Label layoutX="213.0" layoutY="14.0" text="Datos de los Apoderados" textFill="WHITE">
+      <Label layoutX="215.0" layoutY="14.0" text="Datos de los Apoderados" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -35,14 +35,18 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TableView layoutX="26.0" layoutY="257.0" prefHeight="239.0" prefWidth="667.0">
+      <TableView fx:id="tblApoderados" layoutX="26.0" layoutY="257.0" prefHeight="239.0" prefWidth="667.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="DNI" />
-          <TableColumn prefWidth="132.0" text="Nombres" />
-            <TableColumn prefWidth="142.0" text="Apellido Paterno" />
-            <TableColumn prefWidth="143.0" text="Apellido Materno" />
-            <TableColumn prefWidth="173.0" text="Direccion" />
+          <TableColumn fx:id="colDNIPadres" prefWidth="79.0" text="DNI" />
+          <TableColumn fx:id="colNombrePadres" prefWidth="81.0" text="Nombres" />
+            <TableColumn fx:id="colApelldioPadre" prefWidth="111.0" text="Apellido Paterno" />
+            <TableColumn fx:id="colApellidoMadre" prefWidth="115.0" text="Apellido Materno" />
+            <TableColumn fx:id="colDireccion" prefWidth="163.0" text="Direccion" />
+            <TableColumn fx:id="colEdad" prefWidth="32.0" text="Edad" />
+            <TableColumn fx:id="colTelefono" prefWidth="84.0" text="Telefono" />
         </columns>
       </TableView>
+      <Label layoutX="431.0" layoutY="150.0" text="Edad :" textFill="WHITE" />
+      <TextField fx:id="txtEdad" layoutX="475.0" layoutY="146.0" prefHeight="25.0" prefWidth="43.0" />
    </children>
 </AnchorPane>
