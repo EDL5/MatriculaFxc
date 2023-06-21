@@ -2,13 +2,11 @@ package ClasesObjeto;
 
 public class Pagos {
     private String Mes;
-    private String Estado;
     private float Mesualidad;
     private float pago;
 
-    public Pagos(String Mes, String Estado, float Mesualidad, float pago) {
+    public Pagos(String Mes, float Mesualidad, float pago) {
         this.Mes = Mes;
-        this.Estado = Estado;
         this.Mesualidad = Mesualidad;
         this.pago = pago;
     }
@@ -19,14 +17,6 @@ public class Pagos {
 
     public void setMes(String Mes) {
         this.Mes = Mes;
-    }
-
-    public String getEstado() {
-        return Estado;
-    }
-
-    public void setEstado(String Estado) {
-        this.Estado = Estado;
     }
 
     public float getMesualidad() {

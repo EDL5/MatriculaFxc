@@ -9,20 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="Controlador.PagosController">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.PagosController">
    <children>
       <Label layoutX="207.0" layoutY="14.0" text="Pagos de Mensualidad" textFill="WHITE">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <TableView layoutX="25.0" layoutY="80.0" prefHeight="411.0" prefWidth="363.0">
+      <TableView fx:id="tblAlumnos" layoutX="25.0" layoutY="80.0" prefHeight="411.0" prefWidth="363.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nombre" />
-          <TableColumn prefWidth="104.0" text="Apelldo Paterno" />
-            <TableColumn prefWidth="113.0" text="Apellido Materno" />
-            <TableColumn prefWidth="75.0" text="DNI" />
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="colApePaterno" prefWidth="104.0" text="Apelldo Paterno" />
+            <TableColumn fx:id="colApeMaterno" prefWidth="113.0" text="Apellido Materno" />
+            <TableColumn fx:id="colDNI" prefWidth="75.0" text="DNI" />
         </columns>
       </TableView>
       <Label layoutX="424.0" layoutY="80.0" text="Nombre  de Alumno :" textFill="WHITE">
@@ -30,7 +29,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNombreAlu" layoutX="424.0" layoutY="108.0" prefHeight="25.0" prefWidth="260.0" />
+      <TextField fx:id="txtNombreAlu" layoutX="424.0" layoutY="108.0" onKeyReleased="#filtrarNombre" prefHeight="25.0" prefWidth="260.0" />
       <Button fx:id="btnDeuda" layoutX="424.0" layoutY="151.0" mnemonicParsing="false" onAction="#VerDeuda" prefHeight="40.0" prefWidth="83.0" style="-fx-background-color: #3F2B50;" text="Deuda" textFill="WHITE">
          <font>
             <Font size="19.0" />
@@ -39,11 +38,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView layoutX="424.0" layoutY="204.0" prefHeight="155.0" prefWidth="226.0">
+      <TableView fx:id="tblDeuda" layoutX="424.0" layoutY="204.0" prefHeight="155.0" prefWidth="226.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Mes" />
-          <TableColumn prefWidth="75.0" text="Cantidad" />
-            <TableColumn prefWidth="75.0" text="Estado" />
+          <TableColumn fx:id="colMes" prefWidth="75.0" text="Mes" />
+          <TableColumn fx:id="colCantidad" prefWidth="75.0" text="Cantidad" />
+            <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
         </columns>
       </TableView>
       <Button fx:id="btnPagar" layoutX="424.0" layoutY="451.0" mnemonicParsing="false" onAction="#RealisarPago" style="-fx-background-color: #3F2B50;" text="Pagar" textFill="WHITE">
