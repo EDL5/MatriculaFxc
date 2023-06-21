@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
    <children>
       <Label alignment="TOP_CENTER" layoutX="134.0" layoutY="14.0" text="Datos del Alumno a Matricular" textFill="WHITE">
          <font>
@@ -24,7 +24,7 @@
       <Label layoutX="456.0" layoutY="63.0" text="Grado:" textFill="WHITE" />
       <Label layoutX="374.0" layoutY="102.0" text="Fecha de Nacimiento ;" textFill="WHITE" />
       <Label layoutX="362.0" layoutY="137.0" text="Direccion de Estudiante :" textFill="WHITE" />
-      <Button fx:id="btnGuardar" layoutX="456.0" layoutY="181.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="557.0" layoutY="173.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -47,8 +47,8 @@
             <TableColumn prefWidth="75.0" text="DNI" />
             <TableColumn prefWidth="119.0" text="Nombres" />
             <TableColumn prefWidth="134.0" text="Apellido Paterno" />
-            <TableColumn minWidth="7.0" prefWidth="160.0" text="Apellido Materno" />
-            <TableColumn minWidth="7.0" prefWidth="160.0" text="Grado" />
+            <TableColumn minWidth="7.0" prefWidth="198.0" text="Apellido Materno" />
+            <TableColumn minWidth="7.0" prefWidth="130.0" text="Grado" />
          </columns>
       </TableView>
    </children>

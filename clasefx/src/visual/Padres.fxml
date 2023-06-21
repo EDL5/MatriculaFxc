@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.PadresController">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.PadresController">
    <children>
-      <Label layoutX="143.0" layoutY="14.0" text="Datos de los Apoderados" textFill="WHITE">
+      <Label layoutX="213.0" layoutY="14.0" text="Datos de los Apoderados" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -26,9 +26,9 @@
       <TextField fx:id="txtApellidoPP" layoutX="126.0" layoutY="187.0" prefHeight="25.0" prefWidth="171.0" />
       <TextField fx:id="txtApellidoMP" layoutX="126.0" layoutY="146.0" prefHeight="25.0" prefWidth="171.0" />
       <TextField fx:id="txtDNIMadre" layoutX="126.0" layoutY="66.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtTelefonoPadre" layoutX="475.0" layoutY="66.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="txtDireccionPadre" layoutX="477.0" layoutY="105.0" prefHeight="25.0" prefWidth="158.0" />
-      <Button fx:id="btnGuardar" layoutX="458.0" layoutY="159.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
+      <TextField fx:id="txtTelefonoPadre" layoutX="475.0" layoutY="66.0" prefHeight="25.0" prefWidth="126.0" />
+      <TextField fx:id="txtDireccionPadre" layoutX="477.0" layoutY="105.0" prefHeight="25.0" prefWidth="217.0" />
+      <Button fx:id="btnGuardar" layoutX="577.0" layoutY="192.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #3F2B50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>

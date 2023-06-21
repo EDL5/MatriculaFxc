@@ -18,28 +18,28 @@ import java.util.ResourceBundle;
 public class InformeAlumnoController implements Initializable {
 
     @FXML
-    private TableColumn<?, ?> colApellidoMaterno;
+    private TableColumn<String, String> colApellidoMaterno;
 
     @FXML
-    private TableColumn<?, ?> colApellidoPaterno;
+    private TableColumn<String, String> colApellidoPaterno;
 
     @FXML
-    private TableColumn<?, ?> colDNI;
+    private TableColumn<String, String> colDNI;
 
     @FXML
-    private TableColumn<?, ?> colGrado;
+    private TableColumn<String, String> colGrado;
 
     @FXML
-    private TableColumn<?, ?> colID;
+    private TableColumn<String, String> colID;
 
     @FXML
-    private TableColumn<?, ?> colNombre;
+    private TableColumn<String, String> colNombre;
 
     @FXML
-    private TableColumn<?, ?> colPadres;
+    private TableColumn<String, String> colPadres;
 
     @FXML
-    private TableView<?> tblAlumno;
+    private TableView<String> tblAlumno;
 
     @FXML
     private TextField txtnobreAlumnoBusca;
