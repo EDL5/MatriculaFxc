@@ -1,5 +1,7 @@
 package ClasesObjeto;
 
+import java.util.Objects;
+
 public class Persona {
     private int Edad;
     private String Nombre;
@@ -8,6 +10,7 @@ public class Persona {
     private String Direccion;
     private String DNI;
 
+    //constructores
     public Persona(int Edad, String Nombre, String ApelldioPaterno, String ApelldioMaterno, String Direccion) {
         this.Edad = Edad;
         this.Nombre = Nombre;
@@ -23,7 +26,7 @@ public class Persona {
         this.Direccion = Direccion;
         this.DNI = DNI;
     }
-
+    //geter y seter
     public int getEdad() {
         return Edad;
     }
@@ -70,6 +73,27 @@ public class Persona {
 
     public void setDNI(String DNI) {
         this.DNI = DNI;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        return Objects.equals(this.DNI, other.DNI);
     }
     
 }

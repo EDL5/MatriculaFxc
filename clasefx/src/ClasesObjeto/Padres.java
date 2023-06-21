@@ -21,4 +21,5 @@ public class Padres extends Persona{
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
+    
 }
