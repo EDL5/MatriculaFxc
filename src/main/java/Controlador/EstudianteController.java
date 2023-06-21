@@ -1,8 +1,11 @@
 package Controlador;
 
 import ClasesObjeto.Estudiante;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -12,11 +15,12 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class EstudianteController {
 
     @FXML
-    private TableView<Estudiante> estudianteTabla;
+    private TableView<Estudiante> estudianteTablas;
 
     @FXML
     private TextField txtDni;
@@ -27,15 +31,25 @@ public class EstudianteController {
     @FXML
     private TextField txtApellidoMaterno;
     @FXML
-    private ComboBox cbGrado;
+    private ComboBox<String> cbGrado;
     @FXML
     private DatePicker dpFechaNacimiento;
     @FXML
     private TextField txtDireccion;
 
+    @FXML
+    private TableColumn<Estudiante, String> colNombre;
+
+    private List<Estudiante> estudiantes;
 
     @FXML
-    public void btnGuardar(){
+    private void initialize() {
+        listarEstudiantes();
+    }
+
+
+    @FXML
+    public void btnGuardar(ActionEvent event){
 
         Estudiante estudiante = new Estudiante();
 
@@ -64,8 +78,21 @@ public class EstudianteController {
         }
     }
 
-    public List<Estudiante> listarEstudiantes(EntityManager em){
+    public List<Estudiante> listarEstudiantes(){
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("colegio");
+        EntityManager em = emf.createEntityManager();
+
+
+
+        colNombre.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue().getNombre())); ;
+
         String jpql = "SELECT e FROM Estudiante AS e";
+        estudiantes  = em.createQuery(jpql, Estudiante.class).getResultList();
+        for(Estudiante e : estudiantes){
+            System.out.println(e.getNombre());
+        }
+        ObservableList<Estudiante> obEstudiantes = FXCollections.observableArrayList(estudiantes);
+        estudianteTablas.setItems(obEstudiantes);
         return em.createQuery(jpql, Estudiante.class).getResultList();
     }
 
