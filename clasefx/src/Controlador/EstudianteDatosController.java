@@ -4,7 +4,6 @@ import ClasesObjeto.Alumno;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -24,19 +23,19 @@ public class EstudianteDatosController implements Initializable{
     private Button btnGuardar;
 
     @FXML
-    private ComboBox<String> cbxGrado;
-
-    @FXML
     private TableColumn colApellPaterAlumno;
 
     @FXML
     private TableColumn  colApelliMaterAlumno;
+    
+    @FXML
+    private TableColumn colSeccion;
+    
+    @FXML
+    private TableColumn colGradoAlumno;
 
     @FXML
     private TableColumn  colDNI;
-
-    @FXML
-    private TableColumn colGradoAlumno;
     
     @FXML
     private TableColumn colEdad;
@@ -58,6 +57,12 @@ public class EstudianteDatosController implements Initializable{
 
     @FXML
     private TextField txtDNI;
+    
+    @FXML
+    private TextField txtGrado;
+    
+    @FXML
+    private TextField txtSeccion;
 
     @FXML
     private TextField txtDireccion;
@@ -66,13 +71,9 @@ public class EstudianteDatosController implements Initializable{
     private TextField txtNombre;
     
     private ObservableList<Alumno> OSalumno;
-
-    private String[] gradito2 = {null,"1 Primaria","2 Primaria","3 Primaria","4 Primaria","5 Primaria","6 Primaria",
-                                   "1 Secundaria", "2 Secundaria", "3 Secundaria", "4 Secundaria", "5 Secundaria"};
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cbxGrado.getItems().addAll(gradito2);
         
         OSalumno = FXCollections.observableArrayList();
         this.colNombreAlumno.setCellValueFactory(new PropertyValueFactory("Nombre"));
@@ -80,7 +81,8 @@ public class EstudianteDatosController implements Initializable{
         this.colApelliMaterAlumno.setCellValueFactory(new PropertyValueFactory("ApelldioMaterno"));
         this.colDNI.setCellValueFactory(new PropertyValueFactory("DNI"));
         this.colEdad.setCellValueFactory(new PropertyValueFactory("Edad"));
-        //this.colGradoAlumno.setCellValueFactory(new PropertyValueFactory("Grado"));
+        this.colGradoAlumno.setCellValueFactory(new PropertyValueFactory("Grado"));
+        this.colSeccion.setCellValueFactory(new PropertyValueFactory("Seccion"));
     }
 
     @FXML
@@ -90,9 +92,11 @@ public class EstudianteDatosController implements Initializable{
         String ApeMa = this.txtApellidoMaterno.getText();
         String docDNI = this.txtDNI.getText();
         String direc = this.txtDireccion.getText();
+        String grad = this.txtGrado.getText();
+        String secc = this.txtSeccion.getText();
         int edad = Integer.parseInt(this.txtEdad.getText());
         
-        Alumno al = new Alumno(edad,nom,ApePa,ApeMa,direc,docDNI);
+        Alumno al = new Alumno(grad,secc,edad,nom,ApePa,ApeMa,direc,docDNI);
         try{
             if (!this.OSalumno.contains(al)){
                this.OSalumno.add(al);

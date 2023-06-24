@@ -38,11 +38,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView fx:id="tblDeuda" layoutX="424.0" layoutY="204.0" prefHeight="155.0" prefWidth="226.0">
+      <TableView fx:id="tblDeuda" layoutX="424.0" layoutY="204.0" prefHeight="155.0" prefWidth="191.0">
         <columns>
-          <TableColumn fx:id="colMes" prefWidth="75.0" text="Mes" />
-          <TableColumn fx:id="colCantidad" prefWidth="75.0" text="Cantidad" />
-            <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
+          <TableColumn fx:id="colMes" prefWidth="100.0" text="Mes" />
+          <TableColumn fx:id="colCantidad" prefWidth="89.0" text="Cantidad" />
         </columns>
       </TableView>
       <Button fx:id="btnPagar" layoutX="424.0" layoutY="451.0" mnemonicParsing="false" onAction="#RealisarPago" style="-fx-background-color: #3F2B50;" text="Pagar" textFill="WHITE">
