@@ -3,6 +3,7 @@ package Controlador;
 
 import ClasesObjeto.Estudiante;
 import ClasesObjeto.Padres;
+import Utils.ColegioEntity;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,11 +29,11 @@ public class PadresController implements Initializable {
     private TextField txtApellidoPaterno;
     @FXML
     private TextField txtApellidoMaterno;
-
     @FXML
     private TextField txtTelefono;
     @FXML
     private TextField txtDireccion;
+    private EntityManager em = ColegioEntity.getEntityManager();
 
     @FXML
     void Guardar(ActionEvent event) {
@@ -49,15 +50,12 @@ public class PadresController implements Initializable {
 
         Padres padres = new Padres();
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("colegio");
-        EntityManager em = emf.createEntityManager();
-
         padres.setNombre(txtNombre.getText());
-        padres.setDni(txtDni.getText());
+        /*padres.setDni(txtDni.getText());
         padres.setApellidoPaterno(txtApellidoPaterno.getText());
         padres.setApellidoMaterno(txtApellidoMaterno.getText());
         padres.setDireccion(txtDireccion.getText());
-        padres.setTelefono(txtTelefono.getText());
+        padres.setTelefono(txtTelefono.getText());*/
 
         try {
             em.getTransaction().begin();

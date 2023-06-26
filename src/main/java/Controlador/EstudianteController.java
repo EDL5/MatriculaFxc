@@ -1,6 +1,7 @@
 package Controlador;
 
 import ClasesObjeto.Estudiante;
+import Utils.ColegioEntity;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -36,11 +37,13 @@ public class EstudianteController {
     private DatePicker dpFechaNacimiento;
     @FXML
     private TextField txtDireccion;
-
     @FXML
     private TableColumn<Estudiante, String> colNombre;
+    @FXML
+    private TableColumn<Estudiante, String> colApellidoPaterno;
 
     private List<Estudiante> estudiantes;
+    private EntityManager em = ColegioEntity.getEntityManager();
 
     @FXML
     private void initialize() {
@@ -52,9 +55,6 @@ public class EstudianteController {
     public void btnGuardar(ActionEvent event){
 
         Estudiante estudiante = new Estudiante();
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("colegio");
-        EntityManager em = emf.createEntityManager();
 
         estudiante.setNombre(txtNombre.getText());
         estudiante.setDni(txtDni.getText());
@@ -85,6 +85,7 @@ public class EstudianteController {
 
 
         colNombre.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue().getNombre())); ;
+        colApellidoPaterno.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue().getApellidoPaterno()));
 
         String jpql = "SELECT e FROM Estudiante AS e";
         estudiantes  = em.createQuery(jpql, Estudiante.class).getResultList();
