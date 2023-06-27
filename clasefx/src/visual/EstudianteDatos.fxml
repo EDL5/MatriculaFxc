@@ -11,14 +11,14 @@
 
 <AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="723.0" style="-fx-background-color: #4d3d5d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.EstudianteDatosController">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="134.0" layoutY="14.0" text="Datos del Alumno a Matricular" textFill="WHITE">
+      <Label alignment="TOP_CENTER" layoutX="186.0" layoutY="14.0" text="Datos del Alumno a Matricular" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="102.0" text="Nombre :" textFill="WHITE" />
-      <Label layoutX="28.0" layoutY="145.0" text="Apellido Paterno :" textFill="WHITE" />
-      <Label layoutX="26.0" layoutY="184.0" text="Apellido Materno :" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="102.0" text="Nombre :" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="145.0" text="Apellido Paterno :" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="184.0" text="Apellido Materno :" textFill="WHITE" />
       <Label layoutX="313.0" layoutY="63.0" text="Grado :" textFill="WHITE" />
       <Label layoutX="532.0" layoutY="63.0" text="Edad :" textFill="WHITE" />
       <Label layoutX="313.0" layoutY="145.0" text="Direccion de Estudiante :" textFill="WHITE" />
@@ -29,12 +29,12 @@
          <font>
             <Font size="19.0" />
          </font></Button>
-      <TextField fx:id="txtNombre" layoutX="134.0" layoutY="98.0" prefHeight="25.0" prefWidth="142.0" />
-      <TextField fx:id="txtApellidoPaterno" layoutX="134.0" layoutY="141.0" prefHeight="25.0" prefWidth="142.0" />
-      <TextField fx:id="txtApellidoMaterno" layoutX="134.0" layoutY="180.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField fx:id="txtNombre" layoutX="144.0" layoutY="98.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField fx:id="txtApellidoPaterno" layoutX="144.0" layoutY="141.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField fx:id="txtApellidoMaterno" layoutX="144.0" layoutY="180.0" prefHeight="25.0" prefWidth="142.0" />
       <TextField fx:id="txtDireccion" layoutX="450.0" layoutY="141.0" prefHeight="25.0" prefWidth="197.0" />
-      <Label layoutX="28.0" layoutY="63.0" text="DNI :" textFill="WHITE" />
-      <TextField fx:id="txtDNI" layoutX="134.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
+      <Label layoutX="32.0" layoutY="63.0" text="DNI :" textFill="WHITE" />
+      <TextField fx:id="txtDNI" layoutX="144.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
       <TableView fx:id="tblAlumno" layoutX="32.0" layoutY="232.0" prefHeight="261.0" prefWidth="659.0">
          <columns>
             <TableColumn fx:id="colDNI" prefWidth="75.0" text="DNI" />

@@ -26,6 +26,14 @@ public class Persona {
         this.Direccion = Direccion;
         this.DNI = DNI;
     }
+
+    public Persona(String Nombre, String ApelldioPaterno, String ApelldioMaterno, String DNI) {
+        this.Nombre = Nombre;
+        this.ApelldioPaterno = ApelldioPaterno;
+        this.ApelldioMaterno = ApelldioMaterno;
+        this.DNI = DNI;
+    }
+    
     //geter y seter
     public int getEdad() {
         return Edad;

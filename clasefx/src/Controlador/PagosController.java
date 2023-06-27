@@ -1,6 +1,5 @@
 package Controlador;
 
-
 import ClasesObjeto.Alumno;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,63 +11,85 @@ import javafx.scene.input.KeyEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class PagosController implements Initializable {
-
-    @FXML
-    private Button btnDeuda;
 
     @FXML
     private Button btnPagar;
 
     @FXML
-    private TableColumn colApeMaterno;
+    private TableColumn colApellidoMater;
 
     @FXML
-    private TableColumn colApePaterno;
-
-    @FXML
-    private TableColumn colCantidad;
+    private TableColumn colApellidoPater;
 
     @FXML
     private TableColumn colDNI;
 
     @FXML
-    private TableColumn colMes;
-
-    @FXML
     private TableColumn colNombre;
 
     @FXML
-    private TableView<Alumno> tblAlumnos;
+    private TableView<Alumno> tblTablaPago;
 
     @FXML
-    private TableView<String> tblDeuda;
+    private TextField txtEstadoAlumno;
 
     @FXML
-    private TextField txtNombreAlu;
+    private TextField txtMes;
 
     @FXML
-    private TextField txtPagoMensualidad;
+    private TextField txtMontoPagar;
 
     @FXML
-    void RealisarPago(ActionEvent event) {
+    private TextField txtNombre;
+    
+    private ObservableList<Alumno> OSalumnos;
+    private ObservableList<Alumno> OSFiltroalumnos;
 
+         
+    @FXML
+    void FlltarNombre(KeyEvent event) {
+        String filtronombre = this.txtNombre.getText();
+        
+        if(filtronombre.isEmpty()){
+            this.tblTablaPago.setItems(OSalumnos);
+        }else{
+            this.OSFiltroalumnos.clear();
+            for (Alumno p:this.OSalumnos) {
+                if(p.getNombre().toLowerCase().contains(filtronombre.toLowerCase())){
+                    this.OSFiltroalumnos.add(p);
+                }
+            }
+            
+            this.tblTablaPago.setItems(OSFiltroalumnos);
+        }
     }
 
     @FXML
-    void VerDeuda(ActionEvent event) {
-
-    }
-
-    @FXML
-    void filtrarNombre(KeyEvent event) {
-
+    void Pagar(ActionEvent event) {
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        OSalumnos = FXCollections.observableArrayList();
+        this.colNombre.setCellValueFactory(new PropertyValueFactory("Nombre"));
+        this.colApellidoPater.setCellValueFactory(new PropertyValueFactory("ApelldioPaterno"));
+        this.colApellidoMater.setCellValueFactory(new PropertyValueFactory("ApelldioMaterno"));
+        this.colDNI.setCellValueFactory(new PropertyValueFactory("DNI"));
+        
+        OSalumnos = FXCollections.observableArrayList();
+        OSFiltroalumnos = FXCollections.observableArrayList();
+        
+        this.tblTablaPago.setItems(OSalumnos);
+        
+        this.colNombre.setCellValueFactory(new PropertyValueFactory("Nombre"));
+        this.colApellidoPater.setCellValueFactory(new PropertyValueFactory("ApelldioPaterno"));
+        this.colApellidoMater.setCellValueFactory(new PropertyValueFactory("ApelldioMaterno"));
+        this.colDNI.setCellValueFactory(new PropertyValueFactory("DNI"));
     }
 }

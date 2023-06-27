@@ -1,6 +1,8 @@
 package Controlador;
 
 import ClasesObjeto.Alumno;
+import ClasesObjeto.Persona;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +12,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -71,11 +75,15 @@ public class EstudianteDatosController implements Initializable{
     private TextField txtNombre;
     
     private ObservableList<Alumno> OSalumno;
+    private ObservableList<Alumno> OSalumna;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
         OSalumno = FXCollections.observableArrayList();
+        this.tblAlumno.setItems(OSalumno);
+        this.tblAlumno.setItems(OSalumna);
+        
         this.colNombreAlumno.setCellValueFactory(new PropertyValueFactory("Nombre"));
         this.colApellPaterAlumno.setCellValueFactory(new PropertyValueFactory("ApelldioPaterno"));
         this.colApelliMaterAlumno.setCellValueFactory(new PropertyValueFactory("ApelldioMaterno"));
@@ -86,7 +94,7 @@ public class EstudianteDatosController implements Initializable{
     }
 
     @FXML
-    void Guardar(ActionEvent event) {
+    void Guardar(ActionEvent event) throws IOException {
         String nom = this.txtNombre.getText();
         String ApePa = this.txtApellidoPaterno.getText();
         String ApeMa = this.txtApellidoMaterno.getText();
@@ -97,7 +105,10 @@ public class EstudianteDatosController implements Initializable{
         int edad = Integer.parseInt(this.txtEdad.getText());
         
         Alumno al = new Alumno(grad,secc,edad,nom,ApePa,ApeMa,direc,docDNI);
+        Alumno alu = new Alumno(null,null,0,nom,ApePa,ApeMa,docDNI);
+            
         try{
+            
             if (!this.OSalumno.contains(al)){
                this.OSalumno.add(al);
                this.tblAlumno.setItems(OSalumno);
@@ -116,4 +127,5 @@ public class EstudianteDatosController implements Initializable{
             alert.showAndWait();
         }
     }
+    
 }
