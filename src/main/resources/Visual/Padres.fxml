@@ -17,14 +17,12 @@
             </font>
         </Label>
         <Label layoutX="62.0" layoutY="109.0" text="Nombre :" textFill="WHITE" />
-        <Label layoutX="15.0" layoutY="191.0" text=" Apellido Paterno :" textFill="WHITE" />
-        <Label layoutX="16.0" layoutY="150.0" text="Apelldo Materno :" textFill="WHITE" />
+        <Label layoutX="58.0" layoutY="150.0" text="Apellidos :" textFill="WHITE" />
         <Label layoutX="411.0" layoutY="70.0" text="Telefono :" textFill="WHITE" />
         <Label layoutX="409.0" layoutY="109.0" text="Direccion :" textFill="WHITE" />
         <Label layoutX="85.0" layoutY="70.0" text="DNI :" textFill="WHITE" />
-        <TextField fx:id="txtNombre" layoutX="126.0" layoutY="105.0" prefHeight="25.0" prefWidth="171.0" />
-        <TextField fx:id="txtApellidoPaterno" layoutX="126.0" layoutY="187.0" prefHeight="25.0" prefWidth="171.0" />
-        <TextField fx:id="txtApellidoMaterno" layoutX="126.0" layoutY="146.0" prefHeight="25.0" prefWidth="171.0" />
+        <TextField fx:id="txtNombres" layoutX="126.0" layoutY="105.0" prefHeight="25.0" prefWidth="171.0" />
+        <TextField fx:id="txtApellidos" layoutX="126.0" layoutY="146.0" prefHeight="25.0" prefWidth="171.0" />
         <TextField fx:id="txtDni" layoutX="126.0" layoutY="66.0" prefHeight="25.0" prefWidth="113.0" />
         <TextField fx:id="txtTelefono" layoutX="475.0" layoutY="66.0" prefHeight="25.0" prefWidth="126.0" />
         <TextField fx:id="txtDireccion" layoutX="477.0" layoutY="105.0" prefHeight="25.0" prefWidth="217.0" />
@@ -35,15 +33,13 @@
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
-        <TableView fx:id="tblApoderados" layoutX="26.0" layoutY="257.0" prefHeight="239.0" prefWidth="667.0">
+        <TableView fx:id="padresTabla" layoutX="26.0" layoutY="257.0" prefHeight="239.0" prefWidth="667.0">
             <columns>
-                <TableColumn fx:id="colDNIPadres" prefWidth="79.0" text="DNI" />
-                <TableColumn fx:id="colNombrePadres" prefWidth="81.0" text="Nombres" />
-                <TableColumn fx:id="colApelldioPadre" prefWidth="111.0" text="Apellido Paterno" />
-                <TableColumn fx:id="colApellidoMadre" prefWidth="115.0" text="Apellido Materno" />
-                <TableColumn fx:id="colDireccion" prefWidth="163.0" text="Direccion" />
-                <TableColumn fx:id="colEdad" prefWidth="32.0" text="Edad" />
-                <TableColumn fx:id="colTelefono" prefWidth="84.0" text="Telefono" />
+                <TableColumn fx:id="colDni" prefWidth="79.0" text="DNI" />
+                <TableColumn fx:id="colNombres" prefWidth="151.0" text="Nombres" />
+                <TableColumn fx:id="colApellidos" prefWidth="184.0" text="Apellidos" />
+                <TableColumn fx:id="colDireccion" prefWidth="109.0" text="Direccion" />
+                <TableColumn fx:id="colTelefono" prefWidth="143.0" text="Telefono" />
             </columns>
         </TableView>
     </children>

@@ -1,20 +1,17 @@
 package ClasePrincipal;
 
-import ClasesObjeto.Padres;
-import Controlador.PadresController;
+import ClasesObjeto.Grado;
+import Utils.ColegioEntity;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FXMain extends Application {
 
@@ -53,38 +50,27 @@ public class FXMain extends Application {
 
     public static void main(String[] args) {
 
-       /* Alumno alumno = new Alumno();
-        Padres padres = new Padres();
+        /*Grado grado1 = new Grado("1ro de Secundaria");
+        Grado grado2 = new Grado("2do de Secundaria");
+        Grado grado3 = new Grado("3ro de Secundaria");
+        Grado grado4 = new Grado("4to de Secundaria");
+        Grado grado5 = new Grado("5to de Secundaria");
 
-        alumno.setNombre("adios");
-        alumno.setDni("55555");
-        alumno.setGrado("6to");
-
-        padres.setNombre("wewew");
-        padres.setDni("123123");
-        padres.setTelefono("22142");
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("colegio");
-        EntityManager em = emf.createEntityManager();
-
-
-
+        EntityManager em = ColegioEntity.getEntityManager();
 
         try {
             em.getTransaction().begin();
-            //AlumnoController alumnoController = new AlumnoController();
-            //alumnoController.registrarAlumno(alumno, em);
-            /*PadresController padresController = new PadresController();
-            //List<Alumno> alumnos = alumnoController.listarAlumnos(em);
-            List<Padres> padresTale = padresController.buscarPorNombre("wewew", em);
-            System.out.println(padresTale.get(0).getNombre());
+            em.persist(grado1);
+            em.persist(grado2);
+            em.persist(grado3);
+            em.persist(grado4);
+            em.persist(grado5);
             em.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             em.close();
         }*/
-
 
 
         launch(args);
