@@ -16,7 +16,7 @@ public class Pago{
     private String tipoDePago;
     private String mes;
     @ManyToOne
-    @JoinColumn(name = "estudiante_id")
+    @JoinColumn(name = "estudiante_id") //nomb
     private Estudiante estudiante;
 
     public String getFechaDePago() {
