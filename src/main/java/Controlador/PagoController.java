@@ -1,7 +1,9 @@
 package Controlador;
 import ClasesObjeto.Estudiante;
 import ClasesObjeto.Pago;
+import ClasesObjeto.PagoRealizado;
 import Utils.ColegioEntity;
+import Utils.JasperGenerador;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,6 +17,7 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 public class PagoController{
@@ -39,6 +42,8 @@ public class PagoController{
     private List<Estudiante> estudiantes;
     private List<Pago> pagos;
     private Estudiante estudianteAgregado = null;
+
+    List<PagoRealizado> result = new LinkedList<>();
     private EntityManager em = ColegioEntity.getEntityManager();
 
 
@@ -60,11 +65,17 @@ public class PagoController{
         pago.setTipoDePago(cbTipoPago.getValue());
         pago.setEstudiante(estudianteAgregado);
 
+        PagoRealizado pagoRealizado = new PagoRealizado(txtNombres.getText(), txtMontoPagar.getText(), cbMes.getValue());
+        List<PagoRealizado> result = new LinkedList<>();
+
+        result.add(pagoRealizado);
+
 
         try {
             em.getTransaction().begin();
             em.persist(pago);
             em.getTransaction().commit();
+            JasperGenerador.generarJasper(result);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Pago Agregado");
             alert.showAndWait();
