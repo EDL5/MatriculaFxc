@@ -12,6 +12,10 @@ public class Persona {
     private String nombre;
     private String apellidos;
 
+    public Long getId(){
+        return id;
+    }
+
     public String getDni() {
         return dni;
     }

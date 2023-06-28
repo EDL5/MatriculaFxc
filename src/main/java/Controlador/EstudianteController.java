@@ -30,13 +30,11 @@ public class EstudianteController {
     @FXML private TableColumn<Estudiante, String> colGrado;
     @FXML private TableColumn<Estudiante, String> colFechaNacimiento;
 
-
     private List<Estudiante> estudiantes;
     private EntityManager em = ColegioEntity.getEntityManager();
 
     @FXML
     private void initialize() {
-
         listarEstudiantes();
         GradoController gradoController = new GradoController();
         cbGrado.setItems(gradoController.listaGrados());
@@ -45,7 +43,6 @@ public class EstudianteController {
 
     @FXML
     public void btnGuardar(ActionEvent event){
-
         Estudiante estudiante = new Estudiante();
 
         estudiante.setNombre(txtNombres.getText());

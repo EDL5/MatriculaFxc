@@ -32,4 +32,6 @@ public class GradoController {
 
         return obGrados;
     }
+
+
 }
