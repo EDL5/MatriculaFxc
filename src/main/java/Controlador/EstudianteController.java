@@ -43,6 +43,7 @@ public class EstudianteController {
 
     @FXML
     public void btnGuardar(ActionEvent event){
+        em = ColegioEntity.getEntityManager();
         Estudiante estudiante = new Estudiante();
 
         estudiante.setNombre(txtNombres.getText());

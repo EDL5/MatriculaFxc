@@ -21,7 +21,7 @@ public class BordeController implements Initializable {
     private Button btnAlumno;
 
     @FXML
-    private Button btnInforme;
+    private Button btnDocumento;
 
     @FXML
     private Button btnPadres;
@@ -73,13 +73,6 @@ public class BordeController implements Initializable {
 
     @FXML
     void pantallaInformes(ActionEvent event) {
-        try {
-            Parent btnInforme = FXMLLoader.load(getClass().getResource("/visual/InformeAlumno.fxml"));
-            spContendor.getChildren().removeAll();//d
-            spContendor.getChildren().setAll(btnInforme);
-        } catch (IOException ex) {
-            Logger.getLogger(BordeController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
+    }
 }

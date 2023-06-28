@@ -50,11 +50,25 @@ public class FXMain extends Application {
 
     public static void main(String[] args) {
 
-        /*Grado grado1 = new Grado("1ro de Secundaria");
-        Grado grado2 = new Grado("2do de Secundaria");
-        Grado grado3 = new Grado("3ro de Secundaria");
-        Grado grado4 = new Grado("4to de Secundaria");
-        Grado grado5 = new Grado("5to de Secundaria");
+       // crearGrados();
+
+
+        launch(args);
+    }
+
+    public static void crearGrados(){
+        Grado grado1 = new Grado("1ro de Primaria");
+        Grado grado2 = new Grado("2do de Primaria");
+        Grado grado3 = new Grado("3ro de Primaria");
+        Grado grado4 = new Grado("4to de Primaria");
+        Grado grado5 = new Grado("5to de Primaria");
+        Grado grado6 = new Grado("6to de Primaria");
+
+        Grado grado7 = new Grado("1ro de Secundaria");
+        Grado grado8 = new Grado("2do de Secundaria");
+        Grado grado9 = new Grado("3ro de Secundaria");
+        Grado grado10 = new Grado("4to de Secundaria");
+        Grado grado11 = new Grado("5to de Secundaria");
 
         EntityManager em = ColegioEntity.getEntityManager();
 
@@ -65,14 +79,17 @@ public class FXMain extends Application {
             em.persist(grado3);
             em.persist(grado4);
             em.persist(grado5);
+            em.persist(grado6);
+            em.persist(grado7);
+            em.persist(grado8);
+            em.persist(grado9);
+            em.persist(grado10);
+            em.persist(grado11);
             em.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             em.close();
-        }*/
-
-
-        launch(args);
-    } 
+        }
+    }
 }
