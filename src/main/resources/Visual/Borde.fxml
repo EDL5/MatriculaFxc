@@ -64,7 +64,7 @@
                      <children>
                         <ImageView fitHeight="507.0" fitWidth="724.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Desktop/matricula.jpg" />
+                              <Image url="@../../../../../../../Desktop/matricula.jpg" />
                            </image>
                         </ImageView>
                      </children>
