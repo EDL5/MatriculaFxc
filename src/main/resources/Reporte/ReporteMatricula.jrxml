@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMatricula" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1e01b0c-598f-4e35-b772-2212edb20151">
 	<queryString>
 		<![CDATA[]]>
@@ -7,15 +7,16 @@
 	<field name="estudiante" class="java.lang.String"/>
 	<field name="mes" class="java.lang.String"/>
 	<field name="montoPago" class="java.lang.String"/>
+	<field name="persona" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="140" y="20" width="280" height="40" uuid="a6efa54c-096a-43c6-86d4-5c532347a9f4"/>
+				<reportElement x="140" y="20" width="280" height="40" forecolor="#209FC7" uuid="a6efa54c-096a-43c6-86d4-5c532347a9f4"/>
 				<textElement textAlignment="Center">
-					<font size="24"/>
+					<font size="24" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporte de Alumnos]]></text>
 			</staticText>
@@ -27,31 +28,55 @@
 	<columnHeader>
 		<band height="61" splitType="Stretch">
 			<staticText>
-				<reportElement x="-10" y="10" width="90" height="30" uuid="a25debb3-0c7e-459a-a47d-c9507b46e0aa"/>
-				<text><![CDATA[Nombre]]></text>
+				<reportElement x="0" y="11" width="90" height="30" uuid="a25debb3-0c7e-459a-a47d-c9507b46e0aa"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dni]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="280" y="10" width="90" height="30" uuid="53aea540-f615-4577-a9e0-c0aac25272b7"/>
+				<reportElement x="460" y="10" width="90" height="30" uuid="53aea540-f615-4577-a9e0-c0aac25272b7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Mes Pagado]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="149" y="10" width="90" height="30" uuid="f70629f1-2464-48e7-9ca4-b8de69b8cee3"/>
+				<reportElement x="320" y="10" width="90" height="30" uuid="f70629f1-2464-48e7-9ca4-b8de69b8cee3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Monto Pagado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="10" width="90" height="30" uuid="a5841ccc-9842-47af-9523-4c20d475e3d2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="61" splitType="Stretch">
 			<textField>
-				<reportElement x="-11" y="0" width="91" height="30" uuid="2da83ea4-1a96-4f86-ad2d-f9b1fae57ea2"/>
+				<reportElement x="-1" y="1" width="91" height="30" uuid="2da83ea4-1a96-4f86-ad2d-f9b1fae57ea2"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{estudiante}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="280" y="0" width="91" height="30" uuid="5df84ac7-5f57-47ce-beac-06c18da677f4"/>
+				<reportElement x="459" y="0" width="91" height="30" uuid="5df84ac7-5f57-47ce-beac-06c18da677f4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{persona}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="0" width="91" height="30" uuid="4ab91059-7eb0-47d5-a0b2-878024884b8d"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="150" y="0" width="91" height="30" uuid="4ab91059-7eb0-47d5-a0b2-878024884b8d"/>
+				<reportElement x="160" y="0" width="91" height="30" uuid="939e35d5-12e0-4d57-be4b-b96a86b8f205"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{montoPago}]]></textFieldExpression>
 			</textField>
 		</band>

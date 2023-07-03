@@ -25,7 +25,7 @@ public class FXMain extends Application {
         this.primaryStage.setTitle("Matricula");
     
         // Set the application icon.
-        this.primaryStage.getIcons().add(new Image("file:resources/images/pagomatricula.jpg"));
+        this.primaryStage.getIcons().add(new Image("file:resources/images/Matricula.png"));
     
         Borde();
     }

@@ -5,11 +5,13 @@ public class PagoRealizado {
     private String estudiante;
     private String montoPago;
     private String mes;
+    private String persona;
 
-    public PagoRealizado(String estudiante, String montoPago, String mes) {
+    public PagoRealizado(String estudiante, String montoPago, String mes, String persona) {
         this.estudiante = estudiante;
         this.montoPago = montoPago;
         this.mes = mes;
+        this.persona = persona;
     }
 
     public String getEstudiante() {
@@ -36,4 +38,8 @@ public class PagoRealizado {
     public void setMes(String mes) {
         this.mes = mes;
     }
+
+    public String getPersona()  { return persona; }
+
+    public void setPersona(String persona) { this.persona = persona; }
 }

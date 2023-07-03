@@ -19,7 +19,7 @@ public class JasperGenerador {
             JasperPrint jasperPrint = null;
             JasperDesign jasperDesign = null;
             Map paramaters = new HashMap();
-            jasperDesign = JRXmlLoader.load("C:\\Users\\estudiante\\Documents\\proyectos\\MatriculaFxc\\src\\main\\resources\\Reporte\\ReporteMatricula.jrxml");
+            jasperDesign = JRXmlLoader.load("C:\\Users\\Fabrizio\\Downloads\\MatriculaFxc-main\\src\\main\\resources\\Reporte\\ReporteMatricula.jrxml");
             jasperReport = JasperCompileManager.compileReport(jasperDesign);
             jasperPrint = JasperFillManager.fillReport(jasperReport, paramaters,
                     new JRBeanCollectionDataSource(pagoDatos));

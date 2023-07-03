@@ -65,7 +65,7 @@ public class PagoController{
         pago.setTipoDePago(cbTipoPago.getValue());
         pago.setEstudiante(estudianteAgregado);
 
-        PagoRealizado pagoRealizado = new PagoRealizado(txtNombres.getText(), txtMontoPagar.getText(), cbMes.getValue());
+        PagoRealizado pagoRealizado = new PagoRealizado(txtDni.getText(), txtNombres.getText(), txtMontoPagar.getText(), cbMes.getValue());
         List<PagoRealizado> result = new LinkedList<>();
 
         result.add(pagoRealizado);
